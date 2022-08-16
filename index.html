@@ -1,0 +1,95 @@
+
+
+<html lang="en">
+     
+<head>
+<meta charset="utf-8">
+
+<title>Authentication Code</title>
+</head>
+
+<body bgcolor=”#800000"></body>
+   </body>
+  
+   <style>
+
+     
+/* 
+========================
+      BUTTON THREE
+========================
+*/
+.btn-three {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-three::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 300%;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.1);
+  transition: all 0.3s;
+}
+.btn-three:hover::before {
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+}
+.btn-three::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22%;
+  height: 300%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255,255,255,0.5);
+  transform: scale(1.2,1.2);
+}
+.btn-three:hover::after {
+  opacity: 1;
+  transform: scale(1,1);
+}
+   </style>
+  <script>
+     
+    </script>
+         <script>
+            function getURL() {
+        //    alert("Copied");
+           //     window.location.href
+
+               const str = document.URL.toString();
+arr = str.split("code=");
+
+navigator.clipboard.writeText(arr[1]);
+setTimeout(1000);
+alert("Copied the code");
+
+
+            }
+            </script>
+
+
+
+ 
+
+  
+  
+   
+     <!-- Hover #3 -->
+<div class="box-3" allignment="center" onclick="getURL();return false;" >
+     <div class="btn btn-three">
+          
+       <span>Click me to Copy oAuth2 Bearer Code</span>
+      
+     </div>
+   </div>
+</body>
+</html>
