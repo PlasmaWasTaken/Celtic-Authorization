@@ -63,7 +63,7 @@
         //    alert("Copied");
            //     window.location.href
 
-               const str = document.URL.toString();
+               const str = window.location.href.toString();
 arr = str.split("code=");
 
 navigator.clipboard.writeText(arr[1]);
