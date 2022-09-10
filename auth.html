@@ -60,17 +60,22 @@
 
          <script>
             function getURL() {
-        //    alert("Copied");
-           //     window.location.href
-
+        //
                const str = window.location.href.toString();
 arr = str.split("code=");
 
-navigator.clipboard.writeText(arr[1]);
 
-alert("Copied the code");
+const el = document.createElement('textarea');
+  el.value = arr[1];
+  el.setAttribute('readonly', '');
+  el.style.position = 'absolute';
+  el.style.left = '-9999px';
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
 
-
+alert(arr[1]);
             }
             </script>
 
